@@ -1,5 +1,5 @@
 type Post {
-  id: ID!
+  _id: ID!
   title: String!
   content: String!
   author: User!
@@ -18,6 +18,6 @@ type Query {
 
 type Mutation {
   createPost(data: PostInput!): Post!
-  updatePost(id: ID!, data: PostInput!)
+  updatePost(id: ID!, data: PostInput!): User!
   deletePost(id: ID!): Boolean
 }
