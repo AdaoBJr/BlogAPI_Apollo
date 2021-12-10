@@ -1,6 +1,9 @@
 import User from '../../../models/user';
 
 export default {
+  User: {
+    fullName: (user) => `${user.firstName} ${user.lastName}`,
+  },
   Query: {
     users: async () => await User.find(),
     user: async (_, { id }) => await User.findById(id),
