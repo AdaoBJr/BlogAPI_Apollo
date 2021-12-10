@@ -1,13 +1,13 @@
 type User {
-  _id: ID!
-  fistName: String!
+  id: ID!
+  firstName: String!
   lastName: String!
   email: String
   active: Boolean!
 }
 
 input UserInput {
-  fistName: String!
+  firstName: String!
   lastName: String!
   email: String
   active: Boolean!
