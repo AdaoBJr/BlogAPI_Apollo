@@ -1,4 +1,3 @@
-import Post from '../../../models/post';
 import Category from '../../../models/category';
 
 export default {
@@ -7,13 +6,13 @@ export default {
     name: async (category) => await Category.findById(category.id),
   },
   Query: {
-    posts: async () => await Category.find(),
-    post: async (_, { id }) => await Category.findById(id),
+    categories: async () => await Category.find(),
+    category: async (_, { id }) => await Category.findById(id),
   },
   Mutation: {
-    createPost: async (_, { data }) => await Category.create(data),
-    updatePost: async (_, { id, data }) =>
+    createCategory: async (_, { data }) => await Category.create(data),
+    updateCategory: async (_, { id, data }) =>
       await Category.findOneAndUpdate(id, data, { new: true }),
-    deletePost: async (_, { id }) => !!(await Post.findOneAndDelete(id)),
+    deleteCategory: async (_, { id }) => !!(await Category.findOneAndDelete(id)),
   },
 };
