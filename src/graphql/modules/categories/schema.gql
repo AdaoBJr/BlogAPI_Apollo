@@ -1,11 +1,9 @@
 type Category {
   id: ID!
-  cat_id: Int!
   name: String!
 }
 
 input CategoryInput {
-  cat_id: Int!
   name: String!
 }
 

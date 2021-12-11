@@ -2,7 +2,6 @@ import Category from '../../../models/category';
 
 export default {
   Category: {
-    cat_id: async (category) => await Category.findById(category.id),
     name: async (category) => await Category.findById(category.id),
   },
   Query: {
