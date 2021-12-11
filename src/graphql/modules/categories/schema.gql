@@ -3,17 +3,13 @@ type Category {
   name: String!
 }
 
-input CategoryInput {
-  name: String!
-}
-
 type Query {
   categories: [Category!]!
   category(id: ID!): Category!
 }
 
 type Mutation {
-  createCategory(data: CategoryInput!): Category!
-  updateCategory(id: ID!, data: CategoryInput!): Category!
+  createCategory(name: String!): Category!
+  updateCategory(id: ID!, name: String!): Category!
   deleteCategory(id: ID!): Boolean
 }
