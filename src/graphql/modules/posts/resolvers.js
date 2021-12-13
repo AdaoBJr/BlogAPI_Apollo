@@ -1,9 +1,11 @@
 import Post from '../../../models/post';
 import User from '../../../models/user';
+import Category from '../../../models/category';
 
 export default {
   Post: {
     author: async (post) => await User.findById(post.author),
+    category: async (post) => await Category.findById(post.category),
   },
   Query: {
     posts: async () => await Post.find(),
