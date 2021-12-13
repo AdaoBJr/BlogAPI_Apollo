@@ -9,6 +9,11 @@ const Schema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  category: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'Category',
+    required: true,
+  },
   author: {
     type: mongoose.Schema.ObjectId,
     ref: 'User',
